@@ -38,7 +38,6 @@ public class TwoSum {
 	 * @return
 	 */
 	private static int[] twoSum(int[] numbers, int target) {
-
 		int low = 0;
 		int high = numbers.length - 1;
 
