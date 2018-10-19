@@ -31,6 +31,14 @@ public class QueueReconstructionByHeight {
 
 	}
 
+	/**
+	 * 为了使插入操作不影响后续的操作，身高较高的学生应该先做插入操作，否则身高较小的学生原先正确插入的第 k 个位置可能会变成第 k+1 个位置。
+	 * <p>
+	 * 身高降序、k 值升序，然后按排好序的顺序插入队列的第 k 个位置中。
+	 *
+	 * @param people
+	 * @return
+	 */
 	private static int[][] reconstructQueue(int[][] people) {
 
 		if (people == null || people.length == 0 || people[0].length == 0) {
@@ -41,6 +49,8 @@ public class QueueReconstructionByHeight {
 
 		List<int[]> queue = new ArrayList<>();
 		for (int[] p : people) {
+			//将指定的元素插入到列表中指定的位置(可选操作)。将当前位于该位置的元素(如果有的话)和任何后续元素向右移动
+			//(向索引中添加一个元素)。
 			queue.add(p[1], p);
 		}
 
