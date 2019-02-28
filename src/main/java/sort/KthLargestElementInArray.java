@@ -19,8 +19,8 @@ public class KthLargestElementInArray {
 	public static void main(String[] args) {
 		int[] nums = { 5, 1, 3, 2, 9, 6, 4, 8, 7 };
 		int k = 6;
-		System.out.println(findByQuicksort(nums, k));
 		System.out.println(findByHeapsort(nums, k));
+		System.out.println(findByQuicksort(nums, k));
 
 	}
 
